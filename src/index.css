@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+/* Asegura que el sidebar ocupe todo el ancho en móvil */
+@media (max-width: 767px) {
+  .sidebar-mobile {
+    position: absolute;
+    z-index: 20;
+    height: 100%;
+    width: 85%;
+    max-width: 300px;
+  }
+}
