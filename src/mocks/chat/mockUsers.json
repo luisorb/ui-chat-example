@@ -1,0 +1,30 @@
+{
+  "single": [
+    {
+      "id": "user1",
+      "name": "María García",
+      "avatar": "https://i.pravatar.cc/150?img=5",
+      "online": true
+    }
+  ],
+  "multiple": [
+    {
+      "id": "user1",
+      "name": "María García",
+      "avatar": "https://i.pravatar.cc/150?img=5",
+      "online": true
+    },
+    {
+      "id": "user2",
+      "name": "Carlos López",
+      "avatar": "https://i.pravatar.cc/150?img=6",
+      "online": false
+    },
+    {
+      "id": "user3",
+      "name": "Ana Martínez",
+      "avatar": "https://i.pravatar.cc/150?img=7",
+      "online": true
+    }
+  ]
+}

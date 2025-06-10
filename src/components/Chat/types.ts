@@ -1,22 +1,23 @@
-export interface User {
+export interface Message {
+  id: string | number;
+  text: string;
+  user: string;  // Cambiado de 'sender' a 'user'
+  status: 'sent' | 'delivered' | 'read' | 'error';
+  timestamp: string;
+  error?: boolean;
+}
+
+export interface ChatUser {
   id: string;
   name: string;
   avatar?: string;
   online: boolean;
 }
 
-export interface Message {
-  id: string | number;
-  text: string;
-  sender: string;
-  status: 'sent' | 'delivered' | 'read' | 'error';
-  timestamp: string;
-}
-
 export interface Chat {
   id: string;
-  user: User;
-  messages: Message[];
+  user: ChatUser;
+  messages: Message[]; // Array de objetos Message
 }
 
 export type Theme = 'light' | 'dark';
@@ -49,7 +50,7 @@ export interface ChatContainerProps {
 }
 
 export interface ChatHeaderProps {
-  user?: User;
+  user?: ChatUser;
   onBack: () => void;
   theme: Theme;
   toggleTheme: () => void;
