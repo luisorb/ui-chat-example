@@ -69,8 +69,6 @@ const App: React.FC = () => {
   const [skin, setSkin] = useState<Skin>("default");
   const [showSidebar, setShowSidebar] = useState(true);
 
-  const currentChat = demoChats.find((chat) => chat.id === currentChatId);
-
   const toggleSidebar = () => {
     setShowSidebar(!showSidebar);
   };

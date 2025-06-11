@@ -2,12 +2,7 @@ import { motion } from "framer-motion";
 import { FiCheck, FiAlertCircle } from "react-icons/fi";
 import type { MessageProps } from "./types";
 
-const Message: React.FC<MessageProps> = ({
-  message,
-  isCurrentUser,
-  theme,
-  skin,
-}) => {
+const Message: React.FC<MessageProps> = ({ message, isCurrentUser, skin }) => {
   const statusIcons = {
     sent: <FiCheck className="w-3 h-3 text-gray-400" />,
     delivered: (
