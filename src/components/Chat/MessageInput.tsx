@@ -30,22 +30,24 @@ const MessageInput: React.FC<MessageInputProps> = ({ onSend, theme, skin }) => {
   }, [isFocused]);
 
   return (
-    <div className="p-3 border-t border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800">
+    <div className="p-3 border-t border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900">
       <form onSubmit={handleSubmit} className="flex items-center space-x-2">
         <motion.button
           whileTap={{ scale: 0.9 }}
           type="button"
+          aria-label="Emojis"
           className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700"
         >
-          <FiSmile className="w-5 h-5 text-gray-600 dark:text-gray-300" />
+          <FiSmile className="w-5 h-5 text-gray-600 dark:text-white" />
         </motion.button>
 
         <motion.button
           whileTap={{ scale: 0.9 }}
           type="button"
+          aria-label="File"
           className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700"
         >
-          <FiPaperclip className="w-5 h-5 text-gray-600 dark:text-gray-300" />
+          <FiPaperclip className="w-5 h-5 text-gray-600 dark:text-white" />
         </motion.button>
 
         <div className="flex-1 relative">
@@ -85,6 +87,7 @@ const MessageInput: React.FC<MessageInputProps> = ({ onSend, theme, skin }) => {
               exit={{ scale: 0 }}
               whileTap={{ scale: 0.9 }}
               type="submit"
+              aria-label="Send"
               className={`p-2 rounded-full ${
                 skin === "default"
                   ? "bg-blue-500 hover:bg-blue-600"
@@ -102,9 +105,10 @@ const MessageInput: React.FC<MessageInputProps> = ({ onSend, theme, skin }) => {
               exit={{ scale: 0 }}
               whileTap={{ scale: 0.9 }}
               type="button"
+              aria-label="Mic"
               className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700"
             >
-              <FiMic className="w-5 h-5 text-gray-600 dark:text-gray-300" />
+              <FiMic className="w-5 h-5 text-gray-600 dark:text-white" />
             </motion.button>
           )}
         </AnimatePresence>

@@ -18,9 +18,10 @@ const ChatHeader: React.FC<ChatHeaderProps> = ({
         <motion.button
           whileTap={{ scale: 0.9 }}
           onClick={onBack}
+          aria-label="Back"
           className="p-1 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700"
         >
-          <FiChevronLeft className="w-5 h-5 text-gray-600 dark:text-gray-300" />
+          <FiChevronLeft className="w-5 h-5 text-gray-600 dark:text-white" />
         </motion.button>
 
         {user && (
@@ -55,12 +56,13 @@ const ChatHeader: React.FC<ChatHeaderProps> = ({
         <motion.button
           whileTap={{ scale: 0.9 }}
           onClick={toggleTheme}
+          aria-label="Mode"
           className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700"
         >
           {theme === "dark" ? (
-            <FiSun className="w-5 h-5 text-yellow-400" />
+            <FiSun className="w-5 h-5 text-yellow-300" />
           ) : (
-            <FiMoon className="w-5 h-5 text-gray-600" />
+            <FiMoon className="w-5 h-5 text-white" />
           )}
         </motion.button>
 
@@ -75,6 +77,7 @@ const ChatHeader: React.FC<ChatHeaderProps> = ({
             <motion.button
               whileTap={{ scale: 0.9 }}
               className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700"
+              aria-label="Theme"
             >
               <FiMoreVertical className="w-5 h-5 text-gray-600 dark:text-gray-300" />
             </motion.button>

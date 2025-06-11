@@ -27,7 +27,7 @@ const ChatContainer: React.FC<ChatContainerProps> = ({
     const newMessage: Message = {
       id: Date.now(),
       text: message,
-      sender: "user",
+      user: "user",
       status: "sent",
       timestamp: new Date().toISOString(),
     };

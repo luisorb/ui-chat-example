@@ -39,7 +39,7 @@ const Message: React.FC<MessageProps> = ({
           isCurrentUser
             ? `${
                 skin === "default"
-                  ? "bg-blue-500 text-white"
+                  ? "bg-blue-600 text-white"
                   : skin === "modern"
                   ? "bg-purple-600 text-white"
                   : "bg-green-600 text-white"
@@ -51,9 +51,7 @@ const Message: React.FC<MessageProps> = ({
 
         <div
           className={`flex items-center justify-end mt-1 space-x-1 text-xs ${
-            isCurrentUser
-              ? "text-blue-100"
-              : "text-gray-500 dark:text-gray-400 "
+            isCurrentUser ? "text-white" : "text-gray-500 dark:text-gray-100 "
           }`}
         >
           <span>

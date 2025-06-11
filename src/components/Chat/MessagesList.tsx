@@ -27,7 +27,7 @@ const MessagesList: React.FC<MessagesListProps> = ({
             <Message
               key={message.id}
               message={message}
-              isCurrentUser={message.sender === currentUser}
+              isCurrentUser={message.user === currentUser}
               theme={theme}
               skin={skin}
             />

@@ -17,21 +17,21 @@ const demoChats: Chat[] = [
       {
         id: "1",
         text: "Hola! ¿Cómo estás?",
-        sender: "2",
+        user: "2",
         status: "read",
         timestamp: new Date(Date.now() - 3600000).toISOString(),
       },
       {
         id: "2",
         text: "Estoy bien, gracias por preguntar. ¿Y tú?",
-        sender: "user",
+        user: "user",
         status: "read",
         timestamp: new Date(Date.now() - 1800000).toISOString(),
       },
       {
         id: "3",
         text: "¿Quieres quedar este fin de semana?",
-        sender: "2",
+        user: "2",
         status: "delivered",
         timestamp: new Date(Date.now() - 600000).toISOString(),
       },
@@ -49,14 +49,14 @@ const demoChats: Chat[] = [
       {
         id: "1",
         text: "Oye, ¿has visto el último correo que te envié?",
-        sender: "3",
+        user: "3",
         status: "read",
         timestamp: new Date(Date.now() - 86400000).toISOString(),
       },
       {
         id: "2",
         text: "Todavía no, lo revisaré más tarde",
-        sender: "user",
+        user: "user",
         status: "delivered",
         timestamp: new Date(Date.now() - 43200000).toISOString(),
       },
@@ -134,7 +134,7 @@ const App: React.FC = () => {
                 <h3 className="font-medium text-gray-800 dark:text-white">
                   {chat.user.name}
                 </h3>
-                <p className="text-xs text-gray-500 dark:text-gray-400 truncate">
+                <p className="text-xs text-gray-500 dark:text-gray-100 truncate">
                   {chat.messages[chat.messages.length - 1]?.text}
                 </p>
               </div>
