@@ -10,7 +10,7 @@ const demoChats: Chat[] = [
     user: {
       id: "2",
       name: "María García",
-      avatar: "https://randomuser.me/api/portraits/women/44.jpg",
+      avatar: "/images/44.jpg",
       online: true,
     },
     messages: [
@@ -42,7 +42,7 @@ const demoChats: Chat[] = [
     user: {
       id: "3",
       name: "Carlos Martínez",
-      avatar: "https://randomuser.me/api/portraits/men/32.jpg",
+      avatar: "/images/32.jpg",
       online: false,
     },
     messages: [
